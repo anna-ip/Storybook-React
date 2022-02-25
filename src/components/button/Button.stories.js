@@ -14,6 +14,7 @@ const Template = (args) => <Button {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
   variant: "primary",
+  disabled: false,
   children: "Primary",
 };
 export const Secondary = Template.bind({});
