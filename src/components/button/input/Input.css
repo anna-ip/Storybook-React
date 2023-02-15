@@ -1,12 +1,17 @@
 .input {
   display: flex;
   width: 400px;
-  padding: 0 1rem;
+  padding: 0;
   border-radius: 0.25rem;
   border: 1px solid;
   border-color: inherit;
   background-color: #ffffff;
 }
+
+input:focus {
+  border-color: transparent;
+}
+
 .small {
   height: 2rem;
   font-size: 0.875rem;
@@ -19,3 +24,19 @@
   height: 2rem;
   font-size: 0.875rem;
 }
+
+.input, .icon {
+  position: absolute;
+}
+
+.icon {
+  z-index: 3;
+  top: 0.75rem;  
+  left: 25px;
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+  padding-right: 10px;
+}
+
+
