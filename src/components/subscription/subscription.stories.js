@@ -10,7 +10,7 @@ export default {
 const Template = (args) => (
   <>
     <Input variant="small" placeholder="Subscription placeholder" />
-    <Button {...args} />
+    <Button {...args}/>
     <Dropdown/>
   </>
 );
@@ -19,4 +19,5 @@ export const Subscriptions = Template.bind({});
 Subscriptions.args = {
   variant: "primary",
   children: "Primary",
+  onCLick: () => console.log('clicked'),
 };

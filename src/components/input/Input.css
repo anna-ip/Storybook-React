@@ -1,0 +1,98 @@
+.textbox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  position: absolute;
+  top: -16px;  
+  left: 0;
+  font-size: 12px;
+}
+
+.textbox .icon {
+  z-index: 3;
+  position: absolute;
+  top: 0.5rem;  
+  left: 12px;
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+  padding: 0 50px 0 0;
+}
+
+.inputField, .icon {
+  position: absolute;
+}
+
+.inputField {
+  height: 2rem;
+  padding: 0 0 0 12px;
+  border-radius: 0.25rem;
+  border: 1px solid;
+  border-color: inherit;
+  background-color: #ffffff;
+  outline: none;
+  font-size: 0.875rem;
+}
+
+.withIcon {
+  padding: 0 0 0 32px;
+}
+
+.small {
+  width: 200px;
+  
+}
+.medium {
+  width: 400px;
+
+}
+.large {
+  width: 100%;
+}
+
+.textbox .asterix {
+  position: absolute;
+  top: 6px;  
+  right: 80px;
+  font-size: 22px;
+  pointer-events: none;
+  color: #df2666;
+}
+
+.textbox :is(input:valid) ~.asterix {
+  opacity: 0;
+}
+
+@keyframes shake {
+    0%, 100% { translate: 0;}
+    25% {translate: 6px 0;}  
+    75% {translate: -6px 0;}  
+}
+
+.textbox input:valid, .textbox input:valid ~ :is(.asterix, .icon) {
+  animation: none;
+}
+
+.textbox :is(input, .asterix) {
+  animation: shake 0.1635s 0s 3;
+}
+
+.validation {
+position: absolute;
+top: 44px;
+left: 0;
+padding: 10px 6px 10px 24px;
+border-radius: 4px;
+background: #dd4949;
+transform-origin: 50% 0%;
+transition: 0.4s;
+}
+
+.textbox input:valid ~.validation {
+  transform: scaleY(0);
+}
+
+
