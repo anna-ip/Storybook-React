@@ -1,7 +1,7 @@
 import React from "react";
 import video from '../../assets/icons/video.svg';
 import search from '../../assets/icons/search.svg';
-import {Button} from '../button/Button';
+import {Button} from '../button/BaseButton';
 import {Input} from '../input/Input';
 import "./Dropdown.css";
 
