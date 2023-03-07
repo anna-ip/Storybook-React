@@ -1,4 +1,12 @@
-# Getting Started with Create React App
+# Ui component library
+
+A WIP Storybook component library / playground 
+
+Technologies:
+* React
+* Types Script
+* Styled components
+* Storybook
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
