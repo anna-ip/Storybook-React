@@ -4,7 +4,7 @@ A WIP Storybook component library / playground
 
 Technologies:
 * React
-* Types Script
+* Type Script
 * Styled components
 * Storybook
 
