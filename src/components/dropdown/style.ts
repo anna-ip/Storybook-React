@@ -74,7 +74,7 @@ export const Menu = styled.div<MenuProps>`
   z-index: 1;
   top: 72px;
   left: 0;
-  width: 100%;
+  width:100%;
   height: 230px;
   opacity: ${(p) => p.isOpen ? 1 : 0};
   visibility:${(p) => p.isOpen ? 'visible' : 'hidden'}; 

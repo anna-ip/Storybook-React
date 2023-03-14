@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import "./App.css";
-import { BaseDropdown } from './components/dropdown/BaseDropdown';
 import search from './assets/icons/search.svg';
+import { DropDownWithSubMenu } from './components/dropdown/DropDownWithSubMenu';
 
 
 
@@ -26,7 +26,7 @@ const App = () => {
         <p>React Storybook</p>
       </header>
       <main className="App-header">
-        <BaseDropdown toggleDropdown={handleToggleDropdown} isOpen={open} icon={search} mainMenu={mainMenu} subMenu={mainMenu}/>
+        <DropDownWithSubMenu toggleDropdown={handleToggleDropdown} isOpen={open} icon={search} mainMenu={mainMenu} subMenu={mainMenu}/>
       </main>
     </div>
   );
