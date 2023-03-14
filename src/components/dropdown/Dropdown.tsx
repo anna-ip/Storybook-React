@@ -8,6 +8,7 @@ import "./Dropdown.css";
 interface DropDownProps {
   icon?: string;
   placeholder?: string;
+ 
 }
 
 export const Dropdown = ({props}: DropDownProps ) => {

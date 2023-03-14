@@ -1,7 +1,7 @@
 import React from "react";
 import {BaseButton, LoadingButton} from "../button";
 import {Input} from "../input";
-import {Dropdown} from '../dropdown';
+
 
 
 export default {
@@ -13,7 +13,7 @@ const Template = (args) => (
     <Input variant="small" placeholder="Subscription placeholder" />
     <BaseButton {...args}/>
     <LoadingButton {...args}/> 
-    <Dropdown {...args}/>
+  
   </>
 );
 

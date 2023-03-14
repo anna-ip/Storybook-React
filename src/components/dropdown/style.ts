@@ -34,15 +34,11 @@ export const StyledDropdown = styled.div`
 export const Title = styled.p`
 `;
 
-//! change color
-
 interface IconProps {
-  color?: string;
   marginLeft?: string | number;
 }
 
-export const Icon = styled.img<IconProps>`
-  color: white;
+export const StyledIcon = styled.img<IconProps>`
   margin-left: ${(p) => p.marginLeft ? `${p.marginLeft}` : 0};
 `;
 
@@ -52,7 +48,7 @@ interface ChevronProps {
   direction: ChevronDirectionType;
 }
 
-export const Chevron = styled(Icon)<ChevronProps>`
+export const StyledChevron = styled(StyledIcon)<ChevronProps>`
   width: 16px; 
   height: 16px;
   margin-left: auto;
@@ -79,7 +75,7 @@ export const Menu = styled.div<MenuProps>`
   top: 72px;
   left: 0;
   width: 100%;
-  height: 168px;
+  height: 230px;
   opacity: ${(p) => p.isOpen ? 1 : 0};
   visibility:${(p) => p.isOpen ? 'visible' : 'hidden'}; 
   border-radius: 6px;
@@ -100,6 +96,7 @@ export const InnerMenu = styled.div<InnerMenuProps>`
   transition: 0.3s;
   translate: ${(p) => p.open ? '-50%' : ''};
 `;
+
 export const MainMenu = styled.div`
   width: 230px;
 `;

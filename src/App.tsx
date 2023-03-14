@@ -3,6 +3,8 @@ import "./App.css";
 import { BaseDropdown } from './components/dropdown/BaseDropdown';
 import search from './assets/icons/search.svg';
 
+
+
 const App = () => {
   const [open, setOpen] = useState(false)
 
@@ -11,6 +13,12 @@ const App = () => {
     console.log('toggle')
   };
  
+  const mainMenu = [
+    'Alan',
+    'Karen',
+    'John', 
+    'Susan',
+  ];
 
   return (
     <div className="App">
@@ -18,7 +26,7 @@ const App = () => {
         <p>React Storybook</p>
       </header>
       <main className="App-header">
-        <BaseDropdown toggleDropdown={handleToggleDropdown} isOpen={open} icon={search}/>
+        <BaseDropdown toggleDropdown={handleToggleDropdown} isOpen={open} icon={search} mainMenu={mainMenu} subMenu={mainMenu}/>
       </main>
     </div>
   );

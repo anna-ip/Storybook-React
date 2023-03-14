@@ -1,1 +1,2 @@
-export {Dropdown} from './Dropdown'
+export {BaseDropdown} from './BaseDropdown';
+export {Dropdown} from './Dropdown';
