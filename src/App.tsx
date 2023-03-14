@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import React, {useState} from 'react';
 import "./App.css";
 import search from './assets/icons/search.svg';
 import { DropDownWithSubMenu } from './components/dropdown/DropDownWithSubMenu';

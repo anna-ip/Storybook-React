@@ -1,4 +1,4 @@
-import React, {PropsWithChildren} from 'react'
+import React from 'react'
 import { StyledDropdown, Title, StyledIcon, Menu, DropDownButton, StyledChevron } from './style';
 import chevron from '../../assets/icons/chevronDown.svg';
 
@@ -6,9 +6,10 @@ interface BaseDropdownProps {
   toggleDropdown: () => void;
   icon?: string;
   isOpen: boolean;
+  children: React.ReactNode;
 };
 
-export const BaseDropdown = (props : BaseDropdownProps): PropsWithChildren => {
+export const BaseDropdown = (props : BaseDropdownProps) => {
   const {toggleDropdown, icon, isOpen, children} = props;
 
   return (

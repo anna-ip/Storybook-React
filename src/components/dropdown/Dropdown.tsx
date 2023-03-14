@@ -11,7 +11,7 @@ interface DropDownProps {
  
 }
 
-export const Dropdown = ({props}: DropDownProps ) => {
+export const Dropdown = (props: DropDownProps ) => {
   const {icon, placeholder} = props;
   return (
     <div className='dropdown'>
