@@ -15,13 +15,12 @@ export const StyledBaseButton = styled.button<StyledBaseButtonProps>`
   font-size: 16px;
   border-radius: 4px;
   cursor: pointer;
-  ${(props) => 
-  (props.variant === 'primary' && 'background: blue')|| 
-  (props.variant === 'secondary' && 'background: grey') || 
-  (props.variant === 'success' && 'background: green') || 
-  (props.variant === 'danger' && 'background: red')  
-  }
-` 
+  ${(props) =>
+    (props.variant === 'primary' && 'background: blue') ||
+    (props.variant === 'secondary' && 'background: grey') ||
+    (props.variant === 'success' && 'background: green') ||
+    (props.variant === 'danger' && 'background: red')}
+`;
 
 const loading = keyframes`
   0% {
@@ -55,18 +54,24 @@ export const StyledLoadingButton = styled(StyledBaseButton)<StyledLoadingButtonP
   background-color: #282828;
   white-space: nowrap;
 
-   // *******  loading line ********
+  // *******  loading line ********
   ::before {
     background-color: rgb(255 255 255 / 10%);
-  } 
+  }
 
   ::after {
     left: -100%;
-    background-color:${(props) => props.loadingColor ? props.loadingColor : '#34d297' } ;
-    animation: ${props => props.isLoading ? css`${loading} 1s infinite linear` : '' };
+    background-color: ${(props) => (props.loadingColor ? props.loadingColor : '#34d297')};
+    animation: ${(props) =>
+      props.isLoading
+        ? css`
+            ${loading} 1s infinite linear
+          `
+        : ''};
   }
- 
-  ::before, ::after {
+
+  ::before,
+  ::after {
     content: '';
     display: block;
     position: absolute;
@@ -74,10 +79,9 @@ export const StyledLoadingButton = styled(StyledBaseButton)<StyledLoadingButtonP
     left: 0;
     width: 100%;
     height: 4px;
-    opacity: ${(props) => props.isLoading ? 1 : 0};
-    transition: opacity 0.25s;  
+    opacity: ${(props) => (props.isLoading ? 1 : 0)};
+    transition: opacity 0.25s;
   }
-
 `;
 
 interface LabelProps {
@@ -87,12 +91,12 @@ interface LabelProps {
 export const Label = styled.span<LabelProps>`
   color: #ffffff;
   transition: 0.125s;
-  opacity: ${(props) => props.isDisabled ? 0.7 : 1};
-`
+  opacity: ${(props) => (props.isDisabled ? 0.7 : 1)};
+`;
 
 const spin = keyframes`
 { 100% {rotate: 1turn;}}
-` 
+`;
 
 interface LoadingIconProps {
   isLoading: boolean;
@@ -106,12 +110,17 @@ export const Circle = styled.div<LoadingIconProps>`
   height: 28px;
   border-radius: 50%;
   background-color: white;
-  opacity: ${(props) => props.isDisabled ? 0.7 : 1};
-  animation: ${props => props.isLoading ? css`${spin} 0.5s infinite linear` : '' };
+  opacity: ${(props) => (props.isDisabled ? 0.7 : 1)};
+  animation: ${(props) =>
+    props.isLoading
+      ? css`
+          ${spin} 0.5s infinite linear
+        `
+      : ''};
   transition: 0.125s;
-`
+`;
 
 export const LoadingIcon = styled.img`
   width: 20px;
   height: 20px;
-`
+`;

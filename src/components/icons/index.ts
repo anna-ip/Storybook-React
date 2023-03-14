@@ -1,2 +1,2 @@
-export {Chevron} from './Chevron';
-export {Search} from './Search';
+export { Chevron } from './Chevron';
+export { Search } from './Search';

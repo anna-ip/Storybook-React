@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Circle, LoadingIcon, StyledLoadingButton, Label } from './style';
 
 interface LoadingButtonProps {
@@ -8,12 +8,18 @@ interface LoadingButtonProps {
   isLoading: boolean;
 }
 
-export const LoadingButton = ({icon, loadingColor, onClick, isLoading}: LoadingButtonProps) => {
- 
+export const LoadingButton = ({ icon, loadingColor, onClick, isLoading }: LoadingButtonProps) => {
   return (
-    <StyledLoadingButton onClick={onClick} disabled={isLoading} isLoading={isLoading} loadingColor={loadingColor}>
-      <Circle isLoading={isLoading} isDisabled={isLoading}><LoadingIcon alt='icon' src={icon}/></Circle>
-      <Label isDisabled={isLoading}>{isLoading ? "Reloading   " : "Reload app"}</Label>
+    <StyledLoadingButton
+      onClick={onClick}
+      disabled={isLoading}
+      isLoading={isLoading}
+      loadingColor={loadingColor}
+    >
+      <Circle isLoading={isLoading} isDisabled={isLoading}>
+        <LoadingIcon alt='icon' src={icon} />
+      </Circle>
+      <Label isDisabled={isLoading}>{isLoading ? 'Reloading   ' : 'Reload app'}</Label>
     </StyledLoadingButton>
-  )
-}
+  );
+};
