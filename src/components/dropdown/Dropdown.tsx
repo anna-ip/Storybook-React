@@ -5,11 +5,17 @@ import {Button} from '../button/BaseButton';
 import {Input} from '../input/Input';
 import "./Dropdown.css";
 
-export const Dropdown = () => {
-  
+interface DropDownProps {
+  icon?: string;
+  placeholder?: string;
+ 
+}
+
+export const Dropdown = ({props}: DropDownProps ) => {
+  const {icon, placeholder} = props;
   return (
     <div className='dropdown'>
-      <Input type='text' placeholder='Try anything...' variant='small' src={`${search}`} iconAlt='Magnifier' className='dropdown-input' />
+      <Input type='text' placeholder={placeholder ? {placeholder} : 'Try anything...'} variant='small' src={icon ? {icon} :`${search}`} iconAlt='Magnifier' className='dropdown-input' />
       <div className='menu'>
         <div className='menu-content'>
           <Button onClick={() => console.log('Send me to this link')}>

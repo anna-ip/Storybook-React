@@ -1,6 +1,6 @@
 import React from "react";
 import {Input} from './index'
-import Search from '../../assets/icons/search.svg'
+import Search from '../../assets/icons/search-black.svg'
 import { storiesOf } from '@storybook/react';
 
 const stories = storiesOf('Input', module);
