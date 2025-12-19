@@ -78,7 +78,7 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "^2.8.4",
-    "webpack": "^5.69.1"
+    "webpack": "^5.94.0"
   },
   "resolutions": {
     "@storybook/react-docgen-typescript-plugin": "npm:react-docgen-typescript-plugin@1.0.2"
